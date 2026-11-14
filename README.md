@@ -1,10 +1,8 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=venom&height=300&color=0:0f2027,35:203a43,70:2c5364,100:00b09b&text=Jancirani&fontSize=64&fontColor=ffffff&fontAlignY=40&desc=QA%20Automation%20Tester%20%7C%20Quality%20is%20not%20an%20accident.%20It%20is%20engineered.&descAlignY=63&descSize=18&animation=twinkling" width="100%" alt="Jancirani banner" />
+<img src="https://capsule-render.vercel.app/api?type=venom&height=300&color=0:0f2027,35:203a43,70:2c5364,100:00b09b&text=Parabank%20Automation&fontSize=56&fontColor=ffffff&fontAlignY=40&desc=Data-driven%20banking%20tests%20with%20Selenium%2C%20TestNG%20%26%20Excel&descAlignY=63&descSize=18&animation=twinkling" width="100%" alt="Parabank Automation banner" />
 
-<a href="https://github.com/jancirani-testing">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&duration=3000&pause=900&color=00B09B&center=true&vCenter=true&width=800&height=60&lines=%F0%9F%A7%AA+Selenium+WebDriver+%2B+TestNG+%2B+Maven;%F0%9F%9B%92+E-commerce+end-to-end+journeys;%F0%9F%8F%A6+Banking+flows+with+data-driven+testing;%F0%9F%90%9B+Catch+defects+early%2C+ship+with+confidence" alt="Typing animation" />
-</a>
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&duration=3000&pause=900&color=00B09B&center=true&vCenter=true&width=760&height=60&lines=%F0%9F%8F%A6+Automating+the+Parabank+web+app;%F0%9F%93%8A+Test+data+lives+in+Excel%2C+not+in+code;%F0%9F%A7%AA+Selenium+WebDriver+%2B+TestNG+%2B+Maven;%E2%9E%95+New+data+set+%3D+new+row%2C+no+code+change" alt="Typing animation" />
 
 <br/>
 
@@ -12,55 +10,110 @@
 ![Selenium](https://img.shields.io/badge/Selenium-WebDriver-43B02A?style=for-the-badge&logo=selenium&logoColor=white)
 ![TestNG](https://img.shields.io/badge/TestNG-Framework-FF7043?style=for-the-badge&logo=testng&logoColor=white)
 ![Maven](https://img.shields.io/badge/Maven-Build_Tool-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)
+![Apache POI](https://img.shields.io/badge/Apache_POI-Excel_DDT-D22128?style=for-the-badge&logo=apache&logoColor=white)
 ![Eclipse](https://img.shields.io/badge/Eclipse-IDE-2C2255?style=for-the-badge&logo=eclipseide&logoColor=white)
 
 ![Chrome](https://img.shields.io/badge/Chrome-Supported-4285F4?style=flat-square&logo=googlechrome&logoColor=white)
 ![Firefox](https://img.shields.io/badge/Firefox-Supported-FF7139?style=flat-square&logo=firefoxbrowser&logoColor=white)
-![Projects](https://img.shields.io/badge/Automation_Projects-2-00b09b?style=flat-square)
+![Testing](https://img.shields.io/badge/Testing-Data_Driven-00b09b?style=flat-square)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
-![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
 
 <br/>
 
-**[👋 About](#-about-me)** •
-**[🧰 Skills](#-tech-stack)** •
-**[🚀 Projects](#-featured-projects)** •
-**[🧪 Coverage](#-e-commerce-test-coverage)** •
-**[📂 Data-Driven](#-parabank-automation)** •
-**[📊 Reports](#-test-reports--results)** •
-**[🔮 Roadmap](#-roadmap)** •
-**[📫 Connect](#-connect)**
+**[📌 Overview](#-project-overview)** •
+**[✨ Features](#-key-features)** •
+**[🧰 Tech Stack](#-technology-stack)** •
+**[📊 Data-Driven](#-how-data-driven-testing-works)** •
+**[🏗️ Structure](#%EF%B8%8F-project-structure)** •
+**[🚀 Setup](#-getting-started)** •
+**[▶️ Run](#%EF%B8%8F-running-the-tests)** •
+**[📈 Reports](#-test-reports)**
 
 </div>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&height=3&color=gradient&customColorList=12,20,6" width="100%" alt="divider" />
 
-## 👋 About Me
+## 📌 Project Overview
 
-Hi, I'm **Jancirani**, a **QA Automation Tester** who enjoys turning repetitive manual checks into reliable, readable automated tests.
+**Parabank Automation** is a Selenium-based test automation framework for the **Parabank** web application, built with **Java, TestNG and Maven**.
 
-- 🧪 I build UI automation with **Java, Selenium WebDriver, TestNG and Maven**
-- 🛒 I automate **complete customer journeys**, from registration to checkout
-- 🏦 I practise **data-driven testing**, where new scenarios are just new rows in an Excel sheet
-- 🎧 I use **custom TestNG listeners** to monitor the test lifecycle
-- 🌱 Currently improving: **Page Object Model, Extent/Allure reports, CI/CD with GitHub Actions**
+Its main strength is **data-driven testing**: test inputs are stored in **Excel files** and read at run time with **Apache POI**, so the same test logic can run against many data sets without touching the code.
 
-> 🎯 **Mission:** Catch defects early, validate critical user journeys, and build confidence in application quality through automation.
+> 🎯 **Goal:** Keep test logic and test data separate, so tests stay clean, reusable and easy to extend.
+
+```mermaid
+flowchart LR
+    X[("📊 Excel file<br/>TestScriptData.xlsx")] -->|Apache POI| D["🧪 DDT_From_Excel_File.java"]
+    D -->|rows become inputs| W["🌐 Selenium WebDriver"]
+    W --> P["🏦 Parabank web app"]
+    P --> R["📈 TestNG reports<br/>test-output/"]
+
+    style X fill:#43B02A,stroke:#2f7d1e,color:#fff
+    style D fill:#7c4dff,stroke:#5530c9,color:#fff
+    style W fill:#2c5364,stroke:#203a43,color:#fff
+    style P fill:#FF7043,stroke:#c4491f,color:#fff
+    style R fill:#00b09b,stroke:#007f6e,color:#fff
+```
 
 ---
 
-## 🧰 Tech Stack
+## ✨ Key Features
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 📊 Data-Driven Testing
+- 📁 Test data kept in Excel files
+- 🔌 Read using Apache POI
+- ➕ Add rows, not code
+- ♻️ One test, many data sets
+
+</td>
+<td width="50%" valign="top">
+
+### ⚙️ Automation Framework
+- 🌐 Selenium WebDriver browser automation
+- 🧪 TestNG test execution
+- 📦 Maven dependency management
+- 🗂️ Clear separation of pages, utilities and tests
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🧱 Organized Structure
+- 📄 Page objects, utilities and base classes in `src/main/java`
+- 🧪 Test classes in `src/test/java`
+- 🗃️ Test data in `src/test/resources`
+- 🧪 Suite controlled via `testng.xml`
+
+</td>
+<td width="50%" valign="top">
+
+### 📈 Reporting
+- 🌐 TestNG HTML reports
+- 📄 XML execution results
+- ✅ Pass / ❌ fail / ⏭️ skip tracking
+- 📂 Generated in `test-output/`
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🧰 Technology Stack
 
 | Technology | Purpose |
 |:--|:--|
-| ☕ **Java 8+** | Programming language |
+| ☕ **Java** | Programming language |
+| 🧪 **TestNG** | Test framework and execution |
+| 📦 **Maven** | Build tool and dependency management |
 | 🌐 **Selenium WebDriver** | Browser automation |
-| 🧪 **TestNG** | Test execution, grouping and management |
-| 📦 **Apache Maven** | Build and dependency management |
-| 📊 **Apache POI** | Reading Excel test data (data-driven testing) |
-| 🎧 **TestNG Listeners** | Test lifecycle monitoring |
+| 📊 **Apache POI** | Reading Excel test data |
 | 💻 **Eclipse IDE** | Development environment |
-| 🌍 **Chrome / Firefox** | Browser execution |
 
 <details>
 <summary><b>📚 Technology Resources (click to expand)</b></summary>
@@ -76,344 +129,69 @@ Hi, I'm **Jancirani**, a **QA Automation Tester** who enjoys turning repetitive 
 
 ---
 
-## 🚀 Featured Projects
+## 📊 How Data-Driven Testing Works
 
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### 🛒 E-Commerce Test Automation
-Automates the **complete shopping journey** of an e-commerce web app with **16 test classes** across 4 functional areas, plus a custom TestNG listener and HTML/XML reports.
-
-`Java` `Selenium` `TestNG` `Maven`
-
-👉 [**View repository**](https://github.com/jancirani-testing/ecommerce-test-automation)
-
-</td>
-<td width="50%" valign="top">
-
-### 🏦 Parabank Automation
-Selenium framework for the **Parabank** banking web app, with **data-driven testing from Excel** via Apache POI, so new data sets need no code changes.
-
-`Java` `Selenium` `TestNG` `Maven` `Apache POI`
-
-👉 [**View repository**](https://github.com/jancirani-testing/parabank-automation)
-
-</td>
-</tr>
-</table>
-
-### 🗺️ The Customer Journey I Automate (E-Commerce)
+Test data is read from Excel files in `src/test/resources/` by `DDT_From_Excel_File.java` using Apache POI.
 
 ```mermaid
-flowchart LR
-    A([🆕 Register]) --> B([🔐 Login])
-    B --> C([🔎 Search & Browse])
-    C --> D([🛒 Add to Cart])
-    D --> E([🧾 View Cart])
-    E --> F([💳 Checkout])
-    F --> G([⭐ Review])
-    G --> H([🚪 Logout])
+sequenceDiagram
+    autonumber
+    actor QA as 👩‍💻 Tester
+    participant XL as 📊 Excel File
+    participant T as 🧪 DDT_From_Excel_File
+    participant WD as 🌐 WebDriver
+    participant APP as 🏦 Parabank
 
-    style A fill:#00b09b,stroke:#007f6e,color:#fff
-    style B fill:#2c5364,stroke:#203a43,color:#fff
-    style C fill:#43B02A,stroke:#2f7d1e,color:#fff
-    style D fill:#FF7043,stroke:#c4491f,color:#fff
-    style E fill:#ED8B00,stroke:#a86000,color:#fff
-    style F fill:#C71A36,stroke:#8d1226,color:#fff
-    style G fill:#7c4dff,stroke:#5530c9,color:#fff
-    style H fill:#455a64,stroke:#263238,color:#fff
+    QA->>XL: Add a new row of test data
+    QA->>T: Run the suite (mvn test)
+    T->>XL: Read rows with Apache POI
+    loop For every data row
+        T->>WD: Launch browser
+        WD->>APP: Perform actions using row values
+        APP-->>WD: Page response
+        WD-->>T: Assertions
+    end
+    T-->>QA: Reports in test-output/
 ```
 
----
+**Adding a new scenario**
 
-## 🎯 Project Goals
+1. 📝 Open the Excel file in `src/test/resources/`
+2. ➕ Add a new row with your data
+3. ▶️ Run the suite, and the new row is picked up automatically
 
-| | Goal |
-|:-:|:--|
-| 🤖 | Automate repetitive manual testing activities |
-| 🧭 | Validate critical business workflows (shopping and banking) |
-| 🎯 | Improve test execution consistency and reliability |
-| 🧹 | Organize test scripts for readability and maintenance |
-| 🗃️ | Separate test data from test logic with Excel-driven tests |
-| 📈 | Generate execution reports for result analysis |
+> 💡 No code changes are needed for new data sets.
 
 ---
 
-## ✨ Key Features
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### 🛒 End-to-End Shopping Tests
-- 🔎 Product discovery and search
-- ➕ Add and remove cart items
-- 🔢 Product quantity validation
-- 💳 Checkout and order placement
-- 🌟 Recommended product verification
-
-</td>
-<td width="50%" valign="top">
-
-### 🔐 Account & Authentication
-- 📝 User registration
-- 🔑 Login functionality
-- 🚪 Logout functionality
-- 📬 Subscription verification
-- 👤 Account-related workflows
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 🗃️ Data-Driven Testing
-- 📊 Test data kept in Excel files
-- 🔌 Read with Apache POI
-- ➕ New scenarios = new rows, no code change
-- 📁 Data stored in `src/test/resources/`
-- ♻️ Reusable across many test runs
-
-</td>
-<td width="50%" valign="top">
-
-### ⚙️ Automation Architecture
-- 🌐 Selenium WebDriver integration
-- 🧪 TestNG test execution
-- 📦 Maven dependency management
-- 🗂️ Organized Java test packages
-- 🎧 Custom TestNG listener
-
-</td>
-</tr>
-</table>
-
----
-
-## 🧪 E-Commerce Test Coverage
-
-The suite spans **4 functional areas** with **16 test classes** plus shared framework components.
-
-```mermaid
-pie showData title Test Classes by Functional Area
-    "🔐 Authentication (3)" : 3
-    "🛍️ Product Discovery (4)" : 4
-    "🛒 Cart & Checkout (5)" : 5
-    "⭐ Engagement & Subscription (4)" : 4
-```
-
-<details open>
-<summary><b>🔐 1. Authentication & Account Management</b></summary>
-<br/>
-
-| Test Class | Testing Scenario |
-|:--|:--|
-| `Register.java` | ✅ Verify user registration |
-| `Login.java` | ✅ Validate login functionality |
-| `LogOut.java` | ✅ Verify logout functionality |
-
-</details>
-
-<details open>
-<summary><b>🛍️ 2. Product Discovery & Navigation</b></summary>
-<br/>
-
-| Test Class | Testing Scenario |
-|:--|:--|
-| `Search_product.java` | 🔎 Search for products |
-| `View_category.java` | 🗂️ Verify product categories |
-| `Verify_all_product_page.java` | 📃 Validate product listing page |
-| `Recommended_items.java` | 🌟 Verify recommended products |
-
-</details>
-
-<details open>
-<summary><b>🛒 3. Shopping Cart & Checkout</b></summary>
-<br/>
-
-| Test Class | Testing Scenario |
-|:--|:--|
-| `Add_toCart.java` | ➕ Add products to shopping cart |
-| `Remove_cart.java` | ➖ Remove products from cart |
-| `ViewCartProduct.java` | 🧾 Verify cart product details |
-| `Product_quantity.java` | 🔢 Validate product quantity |
-| `Place_order_Resister_checkout.java` | 💳 Verify order placement and checkout |
-
-</details>
-
-<details open>
-<summary><b>⭐ 4. User Engagement & Subscription</b></summary>
-<br/>
-
-| Test Class | Testing Scenario |
-|:--|:--|
-| `Review_on_product.java` | ✍️ Submit product reviews |
-| `Contact_us.java` | 📞 Verify contact functionality |
-| `Verify_Subscription.java` | 📬 Validate subscription functionality |
-| `verify_subscription_cartPage.java` | 🛒 Verify subscription on cart page |
-
-</details>
-
-<details open>
-<summary><b>⚙️ 5. Framework Components</b></summary>
-<br/>
-
-| Component | Responsibility |
-|:--|:--|
-| `TestListener.java` | 🎧 Monitor TestNG test lifecycle |
-| `Functionality.java` | 🧰 Shared test functionality |
-
-</details>
-
-> 📝 **Note:** Test coverage is based on the test classes currently included in the project.
-
----
-
-## 🏦 Parabank Automation
-
-A Selenium-based framework for the **Parabank** web application, built with **Java, TestNG and Maven**, and driven by **Excel input files**.
-
-```mermaid
-flowchart LR
-    X[("📊 TestScriptData.xlsx")] -->|Apache POI| D["🧪 DDT_From_Excel_File.java"]
-    D -->|rows become test inputs| W["🌐 Selenium WebDriver"]
-    W --> P["🏦 Parabank App"]
-    P --> R["📊 test-output reports"]
-
-    style X fill:#43B02A,stroke:#2f7d1e,color:#fff
-    style D fill:#7c4dff,stroke:#5530c9,color:#fff
-    style W fill:#2c5364,stroke:#203a43,color:#fff
-    style P fill:#FF7043,stroke:#c4491f,color:#fff
-    style R fill:#00b09b,stroke:#007f6e,color:#fff
-```
-
-<details>
-<summary><b>📁 Parabank project structure (click to expand)</b></summary>
+## 🏗️ Project Structure
 
 ```text
 parabank-automation/
 │
 ├── 📂 src/
-│   ├── 📂 main/java/              # Page objects, utilities, base classes
+│   ├── 📂 main/java/                # Page objects, utilities, base classes
 │   └── 📂 test/
-│       ├── 📂 java/               # Test classes (TestNG)
+│       ├── 📂 java/                 # Test classes (TestNG)
 │       │   └── 📂 dataDrivenTesting/
 │       │       └── 📊 DDT_From_Excel_File.java
-│       └── 📂 resources/          # Test data (e.g. TestScriptData.xlsx)
+│       └── 📂 resources/            # Test data files (e.g. TestScriptData.xlsx)
 │
-├── 📊 test-output/                # TestNG execution reports
-├── 🎯 target/                     # Compiled build output (ignored in Git)
-├── 📦 pom.xml                     # Maven dependencies and build config
-└── 🧪 testng.xml                  # TestNG suite configuration
+├── 📈 test-output/                  # TestNG execution reports
+├── 🎯 target/                       # Compiled build output (ignored in Git)
+├── 📦 pom.xml                       # Maven dependencies and build config
+└── 🧪 testng.xml                    # TestNG suite configuration
 ```
 
-</details>
-
-**How data-driven testing works here**
-
-1. 📝 Add a new row to the Excel file in `src/test/resources/`
-2. 🔌 `DDT_From_Excel_File.java` reads it using Apache POI
-3. ▶️ The test runs with the new data, with **no code changes**
-
----
-
-## 🏗️ Project Architecture
-
-Both projects follow the standard **Maven directory layout**, separating application code, test scripts, resources, and execution reports.
-
-```mermaid
-flowchart TB
-    subgraph BUILD["📦 Build Layer"]
-        M[pom.xml<br/>Maven]
-    end
-    subgraph RUN["▶️ Execution Layer"]
-        X[testng.xml<br/>Suite config]
-    end
-    subgraph DATA["🗃️ Data Layer"]
-        E[Excel files<br/>Apache POI]
-    end
-    subgraph TEST["🧪 Test Layer"]
-        T[Java test classes]
-        F[Shared logic<br/>Functionality / utilities]
-    end
-    subgraph LISTEN["🎧 Listener Layer"]
-        L[ITlisteners<br/>TestListener.java]
-    end
-    subgraph BROWSER["🌐 Browser"]
-        W[Selenium WebDriver<br/>Chrome / Firefox]
-    end
-    subgraph REPORT["📊 Reporting Layer"]
-        R[test-output<br/>HTML + XML]
-    end
-
-    M --> X --> T
-    E --> T
-    T --> F
-    T --> W
-    T -. events .-> L
-    L --> R
-    T --> R
-
-    style BUILD fill:#C71A36,stroke:#8d1226,color:#fff
-    style RUN fill:#FF7043,stroke:#c4491f,color:#fff
-    style DATA fill:#ED8B00,stroke:#a86000,color:#fff
-    style TEST fill:#43B02A,stroke:#2f7d1e,color:#fff
-    style LISTEN fill:#7c4dff,stroke:#5530c9,color:#fff
-    style BROWSER fill:#2c5364,stroke:#203a43,color:#fff
-    style REPORT fill:#00b09b,stroke:#007f6e,color:#fff
-```
-
-<details>
-<summary><b>📁 E-Commerce directory structure (click to expand)</b></summary>
-
-```text
-ecommerce-test-automation/
-│
-├── 📂 src/
-│   ├── 📂 main/java/ITlisteners/
-│   │   ├── 🎧 TestListener.java
-│   │   └── 📄 package-info.java
-│   │
-│   └── 📂 test/
-│       ├── 📂 java/package_pro/
-│       │   ├── ➕ Add_toCart.java
-│       │   ├── 📞 Contact_us.java
-│       │   ├── 🧰 Functionality.java
-│       │   ├── 🚪 LogOut.java
-│       │   ├── 🔑 Login.java
-│       │   ├── 💳 Place_order_Resister_checkout.java
-│       │   ├── 🔢 Product_quantity.java
-│       │   ├── 🌟 Recommended_items.java
-│       │   ├── 📝 Register.java
-│       │   ├── ➖ Remove_cart.java
-│       │   ├── ✍️ Review_on_product.java
-│       │   ├── 🔎 Search_product.java
-│       │   ├── 📬 Verify_Subscription.java
-│       │   ├── 📃 Verify_all_product_page.java
-│       │   ├── 🧾 ViewCartProduct.java
-│       │   ├── 🗂️ View_category.java
-│       │   ├── 🛒 verify_subscription_cartPage.java
-│       │   └── 📄 package-info.java
-│       └── 📂 resources/
-│
-├── 📊 test-output/              # Generated TestNG reports
-├── 🎯 target/                   # Maven build output
-├── 📦 pom.xml                   # Maven configuration
-└── 🧪 testng.xml                # TestNG suite configuration
-```
-
-</details>
-
-### 🔍 Architecture Highlights
-
-| Layer | Description |
+| Folder / File | Responsibility |
 |:--|:--|
-| 🧪 **Test Layer** | Java test classes that validate application features |
-| 🗃️ **Data Layer** | Excel-driven inputs read with Apache POI |
-| 🎧 **Listener Layer** | Custom listener handling TestNG lifecycle events |
-| 📦 **Build Layer** | Maven manages dependencies and build execution |
-| 📊 **Reporting Layer** | TestNG generates execution reports after each run |
+| 📂 `src/main/java` | Page objects, utilities and base classes |
+| 📂 `src/test/java` | TestNG test classes |
+| 📊 `DDT_From_Excel_File.java` | Reads Excel data and drives the tests |
+| 🗃️ `src/test/resources` | Excel test data files |
+| 📦 `pom.xml` | Maven dependencies and build configuration |
+| 🧪 `testng.xml` | TestNG suite configuration |
+| 📈 `test-output/` | Generated execution reports |
 
 ---
 
@@ -423,43 +201,35 @@ ecommerce-test-automation/
 
 | Requirement | Version |
 |:--|:--|
-| ☕ Java JDK | 8 or above |
-| 📦 Apache Maven | Compatible installed version |
-| 💻 Eclipse IDE | Latest recommended (with TestNG plugin) |
-| 🌍 Browser | Chrome / Firefox, with matching WebDriver |
+| ☕ Java JDK | 8 or higher |
+| 📦 Apache Maven | Installed and on your PATH |
+| 💻 Eclipse IDE | With TestNG and EGit plugins |
+| 🌍 Browser | Chrome or Firefox, plus matching WebDriver |
 
-### ⚡ Quick Setup
+### ⚡ Setup
 
-**1️⃣ Clone a repository**
+**1️⃣ Clone the repository**
 ```bash
-# E-Commerce Test Automation
-git clone https://github.com/jancirani-testing/ecommerce-test-automation.git
-
-# Parabank Automation
 git clone https://github.com/jancirani-testing/parabank-automation.git
+cd parabank-automation
 ```
 
-**2️⃣ Verify Java and Maven**
-```bash
-java -version
-mvn -version
-```
-
-**3️⃣ Install dependencies**
-```bash
-mvn clean install
-```
-
-**4️⃣ Import into Eclipse**
+**2️⃣ Import into Eclipse**
 
 1. **File → Import → Existing Maven Projects**
-2. Browse to the cloned repository and click **Finish**
-3. Right-click the project → **Maven → Update Project**
-4. Update config values (base URL, credentials, file paths) where applicable
+2. Select the cloned folder and click **Finish**
+
+**3️⃣ Download dependencies**
+
+Right-click the project → **Maven → Update Project**
+
+**4️⃣ Update configuration**
+
+Change values such as the base URL, credentials and file paths as needed.
 
 ---
 
-## ▶️ Test Execution
+## ▶️ Running the Tests
 
 <table>
 <tr>
@@ -468,10 +238,9 @@ mvn clean install
 ### 💻 Option 1: Eclipse
 
 1. Open the project in Eclipse
-2. Locate `testng.xml`
-3. Right-click the file
-4. Select **Run As → TestNG Suite**
-5. Watch results in the TestNG console
+2. Right-click `testng.xml`
+3. Select **Run As → TestNG Suite**
+4. Watch results in the TestNG console
 
 </td>
 <td width="50%" valign="top">
@@ -484,45 +253,19 @@ mvn test
 
 # Clean build, then test
 mvn clean test
-
-# Build and package
-mvn clean package
 ```
 
 </td>
 </tr>
 </table>
 
-> ⚠️ **Execution Note:** Results depend on the browser, application availability, and configuration used by the test scripts. Update the application URL, credentials, and browser settings before running.
-
-### 🔄 What Happens During a Run
-
-```mermaid
-sequenceDiagram
-    autonumber
-    actor QA as 👩‍💻 Tester
-    participant MVN as 📦 Maven
-    participant NG as 🧪 TestNG
-    participant L as 🎧 TestListener
-    participant WD as 🌐 WebDriver
-    participant APP as 🛍️ Web App
-
-    QA->>MVN: mvn clean test
-    MVN->>NG: Load testng.xml
-    loop Every test class
-        NG->>L: Test started
-        NG->>WD: Launch browser
-        WD->>APP: Perform user actions
-        APP-->>WD: Page response
-        WD-->>NG: Assertions
-        NG->>L: Test passed / failed / skipped
-    end
-    NG-->>QA: Reports in test-output/
-```
+> ⚠️ **Note:** Results depend on browser setup, application availability and configuration. Make sure the WebDriver matches your browser version.
 
 ---
 
-## 📊 Test Reports & Results
+## 📈 Test Reports
+
+Reports are generated in the `test-output/` folder after each run.
 
 ```text
 📁 test-output/
@@ -536,83 +279,47 @@ sequenceDiagram
 | Report | Description |
 |:--|:--|
 | 🌐 `index.html` | TestNG execution summary |
-| 📧 `emailable-report.html` | Email-friendly test execution report |
-| 📄 `testng-results.xml` | Structured XML test results |
+| 📧 `emailable-report.html` | Email-friendly report |
+| 📄 `testng-results.xml` | Structured XML results |
 
-**👀 View your results:** run the suite → open `test-output/` → open `index.html` in a browser → review ✅ passed, ❌ failed and ⏭️ skipped tests.
+**👀 View results:** run the suite → open `test-output/` → open `index.html` in a browser → review ✅ passed, ❌ failed and ⏭️ skipped tests.
 
 ---
 
-## 🔮 Roadmap
-
-```mermaid
-timeline
-    title 🗺️ Framework Roadmap
-    section Structure
-        Page Object Model : Separate test logic from page interactions
-        Data-Driven Testing everywhere : Extend Excel-driven tests to the e-commerce suite
-    section Reporting
-        Extent Reports / Allure : Advanced execution reports
-        Screenshot Capture : Evidence for failed tests
-        Logging Framework : Better debugging and traceability
-    section Scale
-        Cross-Browser Testing : Wider compatibility coverage
-        Parallel Execution : Faster test runs
-        GitHub Actions : CI/CD pipeline
-```
+## 🔮 Future Enhancements
 
 | Enhancement | Description | Status |
 |:--|:--|:-:|
-| 🧱 Page Object Model | Improve separation of test logic and page interactions | ![Planned](https://img.shields.io/badge/-Planned-orange?style=flat-square) |
-| 📈 Extent Reports / Allure | Add advanced execution reporting | ![Planned](https://img.shields.io/badge/-Planned-orange?style=flat-square) |
-| 🤖 GitHub Actions | Automate test execution through CI/CD | ![Planned](https://img.shields.io/badge/-Planned-orange?style=flat-square) |
-| 🌍 Cross-Browser Testing | Expand browser compatibility coverage | ![Planned](https://img.shields.io/badge/-Planned-orange?style=flat-square) |
-| ⚡ Parallel Execution | Reduce execution time | ![Planned](https://img.shields.io/badge/-Planned-orange?style=flat-square) |
-| 🗃️ Data-Driven Testing | Bring Excel-driven data to every suite | ![Planned](https://img.shields.io/badge/-Planned-orange?style=flat-square) |
+| 🧱 Page Object Model | Strengthen separation of page interactions and test logic | ![Planned](https://img.shields.io/badge/-Planned-orange?style=flat-square) |
+| 📈 Extent Reports / Allure | Richer execution reports | ![Planned](https://img.shields.io/badge/-Planned-orange?style=flat-square) |
 | 📸 Screenshot Capture | Capture screenshots for failed tests | ![Planned](https://img.shields.io/badge/-Planned-orange?style=flat-square) |
-| 📝 Logging Framework | Improve debugging and execution traceability | ![Planned](https://img.shields.io/badge/-Planned-orange?style=flat-square) |
-
----
-
-## 📈 GitHub Stats
-
-<div align="center">
-
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=jancirani-testing&show_icons=true&hide_border=true&bg_color=0f2027&title_color=00b09b&icon_color=00b09b&text_color=ffffff" alt="GitHub stats" />
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jancirani-testing&layout=compact&hide_border=true&bg_color=0f2027&title_color=00b09b&text_color=ffffff" alt="Top languages" />
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=jancirani-testing&theme=dark&hide_border=true&background=0f2027&ring=00b09b&fire=ff7043&currStreakLabel=00b09b" alt="GitHub streak" />
-
-</div>
+| 📝 Logging Framework | Better debugging and traceability | ![Planned](https://img.shields.io/badge/-Planned-orange?style=flat-square) |
+| ⚡ Parallel Execution | Reduce execution time | ![Planned](https://img.shields.io/badge/-Planned-orange?style=flat-square) |
+| 🤖 GitHub Actions | CI/CD pipeline for automatic runs | ![Planned](https://img.shields.io/badge/-Planned-orange?style=flat-square) |
 
 ---
 
 ## 🤝 Contributing
 
-Contributions, suggestions, and improvements are always welcome! 💚
+Contributions and suggestions are welcome! 💚
 
 ```bash
-# 1. Fork the repository, then create a branch
 git checkout -b feature/your-feature-name
-
-# 2. Commit your changes
 git commit -m "Add: your feature description"
-
-# 3. Push your branch
 git push origin feature/your-feature-name
 ```
 
-Then open a **Pull Request** and describe your changes for review.
-
-### 🐛 Issues & Feedback
-
-Found a bug or have an idea? Open an issue in the relevant repository, describe the problem clearly, include execution details or screenshots, and suggest improvements whenever possible.
+Then open a **Pull Request** describing your changes.
 
 ---
 
-## 📫 Connect
+## 👨‍💻 Author
 
 <div align="center">
+
+**Yogeshwari**
+
+*QA Automation Tester* &nbsp;|&nbsp; ☕ Java &nbsp;|&nbsp; 🌐 Selenium WebDriver &nbsp;|&nbsp; 🧪 TestNG &nbsp;|&nbsp; 📊 Apache POI
 
 <a href="https://github.com/jancirani-testing">
   <img src="https://img.shields.io/badge/GitHub-jancirani--testing-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub profile" />
@@ -620,29 +327,7 @@ Found a bug or have an idea? Open an issue in the relevant repository, describe 
 
 <br/><br/>
 
-**QA Automation Tester** &nbsp;|&nbsp; ☕ Java &nbsp;|&nbsp; 🌐 Selenium WebDriver &nbsp;|&nbsp; 🧪 TestNG &nbsp;|&nbsp; 📊 Apache POI
-
-*Passionate about software quality, test automation, and building reliable testing solutions.*
-
-**🧪 Building better software, one automated test at a time.**
-
-</div>
-
----
-
-## 📄 License
-
-Distributed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
-
----
-
-<div align="center">
-
-## ⭐ Like My Work?
-
-If you find these automation frameworks useful, consider giving them a **Star ⭐** on GitHub. Your support and feedback are appreciated!
-
-<br/>
+**⭐ If this project helped you, consider giving it a star!**
 
 <img src="https://capsule-render.vercel.app/api?type=waving&height=160&section=footer&color=0:00b09b,50:2c5364,100:0f2027&animation=fadeIn" width="100%" alt="footer" />
 
