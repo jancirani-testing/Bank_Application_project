@@ -319,7 +319,7 @@ Then open a **Pull Request** describing your changes.
 
 <div align="center">
 
-**Yogeshwari**
+**Jancirani**
 
 *QA Automation Tester* &nbsp;|&nbsp; ☕ Java &nbsp;|&nbsp; 🌐 Selenium WebDriver &nbsp;|&nbsp; 🧪 TestNG &nbsp;|&nbsp; 📊 Apache POI
 
