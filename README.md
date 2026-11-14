@@ -1,6 +1,8 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=venom&height=300&color=0:0f2027,35:203a43,70:2c5364,100:00b09b&text=Parabank%20Automation&fontSize=56&fontColor=ffffff&fontAlignY=40&desc=Data-driven%20banking%20tests%20with%20Selenium%2C%20TestNG%20%26%20Excel&descAlignY=63&descSize=18&animation=twinkling" width="100%" alt="Parabank Automation banner" />
+
+<img src="https://capsule-render.vercel.app/api?type=venom&height=300&color=0:0f2027,50:203a43,100:00b09b&text=Parabank%20Automation&fontSize=50&fontColor=ffffff&fontAlignY=40&desc=Data-driven%20banking%20tests%20with%20Selenium%20and%20TestNG&descAlignY=60&descSize=16" width="100%" alt="Parabank Automation banner" />
+
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&duration=3000&pause=900&color=00B09B&center=true&vCenter=true&width=760&height=60&lines=%F0%9F%8F%A6+Automating+the+Parabank+web+app;%F0%9F%93%8A+Test+data+lives+in+Excel%2C+not+in+code;%F0%9F%A7%AA+Selenium+WebDriver+%2B+TestNG+%2B+Maven;%E2%9E%95+New+data+set+%3D+new+row%2C+no+code+change" alt="Typing animation" />
 
